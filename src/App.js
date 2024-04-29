@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import AddTodo from './components/AddTodo';
+import Todo from './components/Todo';
 
 function App() {
+  const[value,setValue]=useState(false)
+  function handleClick(){
+    console.log(value)
+    setValue(!value)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='first'>
+      <div>
+        Learn how to use redux
+        
+      </div>
+   <div><AddTodo>
+   </AddTodo></div>
+   <div><Todo></Todo></div>
+   </div>
   );
 }
 
